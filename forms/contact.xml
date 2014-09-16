@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form>
-	<fields name="params">
-		<fieldset name="foo"
-		          label="PLG_CONTENT_EXAMPLE_FIELDSET_LABEL">
+	<fields name="foo">
+		<fieldset name="bar"
+		          label="PLG_CONTENT_EXAMPLE_BAR_FIELDSET_LABEL">
 			<field
 					name="contact_emaillabel2"
 					type="text"
@@ -15,8 +15,8 @@
 					filter="email"
 					/>
 		</fieldset>
-		<fieldset name="bar"
-		          label="PLG_CONTENT_EXAMPLE_FIELDSET2_LABEL">
+		<fieldset name="baz"
+		          label="PLG_CONTENT_EXAMPLE_BAZ_FIELDSET_LABEL">
 			<field
 					name="contact_emaillabel3"
 					type="text"

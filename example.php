@@ -8,7 +8,6 @@
  * Copyright  Copyright (C) 2014 betweenbrain llc. All Rights Reserved.
  * License    GNU GPL v2 or later
  */
-
 class plgContentExample extends JPlugin
 {
 
@@ -26,23 +25,15 @@ class plgContentExample extends JPlugin
 	function onContentPrepareForm($form, $data)
 	{
 		$app    = JFactory::getApplication();
-		$option = $app->input->get('option');
 
-		switch ($option)
+		if ($app->isAdmin())
 		{
+			JForm::addFormPath(__DIR__ . '/forms');
+			$form->loadFile('contact', false);
 
-			case 'com_contact':
-				if ($app->isAdmin())
-				{
-					JForm::addFormPath(__DIR__ . '/forms');
-					$form->loadFile('contact', false);
-				}
-
-				return true;
-
+			return true;
 		}
 
-		return true;
 	}
 
 }
